@@ -101,20 +101,14 @@ With the bundled browser extension:
 
 ## Installation & Release Files
 
+Download official release files directly from the **[GitHub Releases](https://github.com/Vivektheprogrammer/NetBoost/releases)** page:
+
 ### Windows Installer (NSIS Setup)
-Download the installer executable from the Releases section:
-```
-NetBoost_1.0.0_x64-setup.exe
-```
+**[Download NetBoost_1.0.0_x64-setup.exe](https://github.com/Vivektheprogrammer/NetBoost/releases/download/v1.0.0/NetBoost_1.0.0_x64-setup.exe)**
+
 - **Windows Search Integration:** Automatically installs to the Windows Start Menu. Press `Win` and type `NetBoost` to launch.
 - **Uninstaller:** Registers with Windows *Installed Apps* / *Add or Remove Programs* with an automated uninstaller.
 - **User-Level Execution:** Runs in user-mode (`currentUser`) without requiring UAC administrator elevation.
-
-### Standalone Portable Executable
-```
-NetBoost.exe
-```
-Single self-contained executable that can be run directly from any folder or removable storage device.
 
 ### Browser Extension (Chrome & Edge)
 
