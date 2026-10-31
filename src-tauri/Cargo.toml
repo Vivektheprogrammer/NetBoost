@@ -1,0 +1,42 @@
+[package]
+name = "netboost"
+version = "1.0.0"
+description = "NetBoost – Intelligent Windows Network Optimization"
+authors = ["NetBoost Team"]
+edition = "2021"
+
+[lib]
+name = "netboost_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.7.4", features = [] }
+
+[dependencies]
+tauri = { version = "2.12.5", features = ["tray-icon"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+reqwest = { version = "0.12", default-features = false, features = ["stream", "json", "rustls-tls"] }
+chrono = { version = "0.4", features = ["serde"] }
+sha2 = "0.10"
+log = "0.4"
+windows-sys = { version = "0.59", features = [
+    "Win32_Foundation",
+    "Win32_NetworkManagement_IpHelper",
+    "Win32_NetworkManagement_Ndis",
+    "Win32_Networking_WinSock",
+    "Win32_System_Diagnostics_ToolHelp",
+    "Win32_System_Threading",
+    "Win32_System_ProcessStatus",
+    "Win32_Security"
+] }
+
+[profile.dev]
+incremental = false
+
+[profile.release]
+incremental = false
+opt-level = 2
+lto = false

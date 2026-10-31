@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 280px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 16px;
+      background: #0f172a;
+      color: #f8fafc;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .status-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .status-text {
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .indicator.online {
+      background: #10b981;
+      box-shadow: 0 0 6px #10b981;
+    }
+
+    .indicator.offline {
+      background: #ef4444;
+    }
+
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      padding-top: 8px;
+      border-top: 1px solid #334155;
+    }
+
+    .footer {
+      margin-top: 12px;
+      font-size: 10px;
+      color: #64748b;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <img src="icons/icon32.png" width="24" height="24" style="border-radius:6px; object-fit:contain;" alt="NetBoost" />
+    <div>
+      <div class="title">NetBoost Integration</div>
+      <div style="font-size: 10px; color: #94a3b8;">Browser Download Interceptor</div>
+    </div>
+  </div>
+
+  <div class="status-card">
+    <span style="font-size:11px; color:#94a3b8;">Desktop App:</span>
+    <div class="status-text">
+      <div id="dot" class="indicator offline"></div>
+      <span id="status-label">Checking...</span>
+    </div>
+  </div>
+
+  <div class="toggle-row">
+    <span>Capture Downloads</span>
+    <input type="checkbox" id="enabled-toggle" checked>
+  </div>
+
+  <div class="footer">
+    NetBoost v1.0 • Local Loopback Bridge
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

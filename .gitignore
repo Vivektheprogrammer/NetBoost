@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Production build outputs
+dist/
+dist-ssr/
+release/
+
+# Rust / Cargo build artifacts
+src-tauri/target/
+src-tauri/gen/schemas
+Cargo.lock
+
+# Standalone build binaries & temporary execution outputs
+*.exe
+*.old.exe
+*.dll
+*.pdb
+*.zip
+*.log
+run.log
+
+# IDE & Editor caches
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS temporary files
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Environment variables & local configuration
+.env
+.env.*
+!.env.example
+

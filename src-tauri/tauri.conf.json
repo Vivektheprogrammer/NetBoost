@@ -1,0 +1,53 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "NetBoost",
+  "version": "1.0.0",
+  "identifier": "com.netboost.desktop",
+  "build": {
+    "frontendDist": "../dist",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "NetBoost – Network Optimization Utility",
+        "width": 1180,
+        "height": 780,
+        "minWidth": 960,
+        "minHeight": 640,
+        "resizable": true,
+        "fullscreen": false,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "resources": {
+      "../extension": "extension"
+    },
+    "shortDescription": "Intelligent Windows Network Optimization Utility",
+    "longDescription": "NetBoost is a high-performance Windows network optimization utility and download accelerator featuring dynamic latency pacing, bufferbloat mitigation, intelligent streaming prioritization, and multi-threaded chunk acceleration.",
+    "publisher": "NetBoost",
+    "copyright": "Copyright © 2026 NetBoost",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser",
+        "installerIcon": "icons/icon.ico"
+      }
+    }
+  }
+}
