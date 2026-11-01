@@ -38,4 +38,6 @@ $RECYCLE.BIN/
 .env
 .env.*
 !.env.example
+BUILD_PROCESS.md
+*.local.md
 
